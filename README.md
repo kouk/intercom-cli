@@ -1,32 +1,59 @@
-node-cli-boilerplate
-===
+intercom-cli
+============
 
-a simple node command line interface application boilerplate for getting up and running quickly.
-
-it sets you up with a simple node app that basically acts like `echo`. You input a message with the message option and it prints it back to you.
-
-it uses commander.js and colors as dependencies to aid with easy options parsing and aesthetically pleasing printing. As for dev dependencies mocha is included with a simple unit test set up for the print function. You can run this with `make test`. gulp is included if you wish to continue with the coffeescript source.
-
-*note:_uses gulp.js to convert coffeescript src but this isn't intrusive and you can just work with the javascript source._
+a simple node command line interface application for interacting with [intercom.io](http://intercom.io).
 
 ###to get up and running
 
 * clone the repo
 
-		git clone https://github.com/jh3y/node-cli-boilerplate.git
+		git clone https://github.com/kouk/intercom-cli.git
     
 * install the dependencies
 
-		cd node-cli-boilerplate
+		cd intercom-cli
 		npm install
     
-* make the bin file executable
+* make the file executable
 
-		chmod u+x bin/cli
+		chmod u+x bin/intercom
+
+* add your [intercom API credentials](http://docs.intercom.io/api) to `~/.config/intercom-cli/settings.json`:
+
+        {
+          "intercom_settings": {
+            "api_key": "ro-203984098a09dff098da0980d9809e098df",
+            "app_id": "aoijdfoi43"
+          }
+        }
     
-* run the boilerplate with
+* run the app with `-h` to see options:
 
-		./bin/cli
+		./bin/intercom
+        Usage: intercom [options] [command]
+
+        Commands:
+
+          user <user>
+             show information about a user
+          
+          conversations <user>
+             show user's conversations
+          
+          conversation <id>
+             show a conversation
+          
+
+        Options:
+
+          -h, --help               output usage information
+          -V, --version            output the version number
+          -c, --config [filename]  set config filename.
+
+        Examples:
+
+          $ intercom-cli user user@domain.com
+
     
 * start hacking!
 * run tests with
@@ -35,7 +62,7 @@ it uses commander.js and colors as dependencies to aid with easy options parsing
 
 
 ###any problems?
-contact me, I'll be happy to help you out. Tweet me at __@_jh3y__
+contact me, I'll be happy to help you out. Tweet me at __@koukopoulos
 
 
-@jh3y
+@koukopoulos

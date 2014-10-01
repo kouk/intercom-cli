@@ -1,20 +1,20 @@
 {
-  "name": "node-cli-boilerplate",
-  "description": "a simple boilerplate for writing node cli apps",
-  "version": "0.0.3",
+  "name": "intercom-cli",
+  "description": "cli for intercom",
+  "version": "0.0.1",
   "main": "index.js",
-  "homepage": "https://github.com/jh3y/node-cli-boilerplate",
+  "homepage": "https://github.com/kouk/intercom-cli",
   "author": {
-    "name": "jh3y",
-    "email": "jh3y@users.noreply.github.com",
-    "url": "http://jh3y.github.io"
+    "name": "kouk",
+    "email": "kouk@users.noreply.github.com",
+    "url": "http://kouk.github.io"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jh3y/node-cli-boilerplate.git"
+    "url": "git@github.com:kouk/intercom-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/jh3y/node-cli-boilerplate/issues"
+    "url": "https://github.com/kouk/intercom-cli/issues"
   },
   "licenses": [
     {
@@ -23,7 +23,7 @@
   ],
   "preferGlobal": true,
   "bin": {
-    "cli": "./bin/cli"
+    "intercom": "./bin/intercom"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -31,7 +31,10 @@
   "dependencies": {
     "colors": "^0.6.2",
     "commander": "^2.2.0",
-    "node-intercom": "0.0.4"
+    "walkie-talkie": "0.0.4",
+    "path-extra": "^0.3.0",
+    "prettyjson": "^1.0.0",
+    "seraphim": "^0.1.0"
   },
   "keywords": [],
   "devDependencies": {
